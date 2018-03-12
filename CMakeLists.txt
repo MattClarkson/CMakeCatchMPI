@@ -176,7 +176,7 @@ include(ccmpiIncludeMPI)
 ######################################################################
 # A few shortcuts for lists of libraries.
 ######################################################################
-set(CMAKECATCHMPI_LIBRARIES ccmpilib)
+set(CMAKECATCHMPI_LIBRARIES ccmpi)
 set(ALL_LIBRARIES ${CMAKECATCHMPI_LIBRARIES})
 
 

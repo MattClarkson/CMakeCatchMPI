@@ -16,7 +16,7 @@ set(DATA_DIR ${CMAKE_SOURCE_DIR}/Testing/Data)
 set(TMP_DIR ${CMAKE_BINARY_DIR}/Testing/Temporary)
 
 set(TEST_CASES
-  ccmpiInitialisationTest
+  ccmpiBasicTest
 )
 
 foreach(_test_case ${TEST_CASES})
@@ -31,4 +31,4 @@ endforeach()
 # Dont forget its:  add_test(<test name (globally unique) > <exe name> <argument1> <argument2>
 ##################################################################################################
 
-add_test(Init ${EXECUTABLE_OUTPUT_PATH}/ccmpiInitialisationTest)
+add_test(Basic ${EXECUTABLE_OUTPUT_PATH}/ccmpiBasicTest)

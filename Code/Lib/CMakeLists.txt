@@ -12,7 +12,7 @@
 #
 #============================================================================*/
 
-set(CMAKECATCHMPI_LIBRARY_NAME ccmpilib)
+set(CMAKECATCHMPI_LIBRARY_NAME ccmpi)
 
 set(CMAKECATCHMPI_LIBRARY_SRCS
   ccmpiBasicTypes.cpp
