@@ -16,7 +16,9 @@ set(DATA_DIR ${CMAKE_SOURCE_DIR}/Testing/Data)
 set(TMP_DIR ${CMAKE_BINARY_DIR}/Testing/Temporary)
 
 set(TEST_CASES
-  ccmpiBasicTest
+  ccmpiInitTest
+  ccmpiSyncSendTest
+  ccmpiAsyncSendTest
 )
 
 foreach(_test_case ${TEST_CASES})
@@ -31,4 +33,6 @@ endforeach()
 # Dont forget its:  add_test(<test name (globally unique) > <exe name> <argument1> <argument2>
 ##################################################################################################
 
-add_test(Basic ${EXECUTABLE_OUTPUT_PATH}/ccmpiBasicTest)
+add_test(Init ${EXECUTABLE_OUTPUT_PATH}/ccmpiInitTest)
+add_test(SyncSend ${EXECUTABLE_OUTPUT_PATH}/ccmpiSyncSendTest)
+add_test(AsyncSend ${EXECUTABLE_OUTPUT_PATH}/ccmpiAsynchSendTest)
