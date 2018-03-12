@@ -34,5 +34,5 @@ endforeach()
 ##################################################################################################
 
 add_test(Init ${EXECUTABLE_OUTPUT_PATH}/ccmpiInitTest)
-add_test(SyncSend ${EXECUTABLE_OUTPUT_PATH}/ccmpiSyncSendTest)
-add_test(AsyncSend ${EXECUTABLE_OUTPUT_PATH}/ccmpiAsynchSendTest)
+add_test(SyncSend ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiSyncSendTest)
+add_test(AsyncSend ${MPIEXEC} ${MPIEXEC_NUMPROC_FLAG} ${MPIEXEC_MAX_NUMPROCS} ${EXECUTABLE_OUTPUT_PATH}/ccmpiAsyncSendTest)

@@ -35,13 +35,12 @@ TEST_CASE( "Asynchronous Send String", "[MPI]" ) {
   if (rank == 0) {
     MPI_Request request;
     int error = MPI_Isend((void*) peace.c_str(), peace.size() + 1, MPI_CHAR, 1, 42, MPI_COMM_WORLD, &request);
+    REQUIRE(error ==  MPI_SUCCESS);
+
     // We do not guarantee that Rank 1 has received the message yet
     // We can carry on, and ANY WORK WE DO NOW WILL OVERLAP WITH THE
     // COMMUNICATION
-
     // BUT, we can't safely change the string.
-
-    REQUIRE(error ==  MPI_SUCCESS);
 
     // Do some expensive work here
     for (int i=0; i<1000; i++) {}; // BUSYNESS FOR EXAMPLE
