@@ -1,15 +1,16 @@
-CMakeCatchTemplate
+CMakeCatchMPI
 ------------------
 
-[![Build Status](https://travis-ci.org/MattClarkson/CMakeCatch2.svg?branch=master)](https://travis-ci.org/MattClarkson/CMakeCatch2)
-[![Build Status](https://ci.appveyor.com/api/projects/status/5pm89ej732c1ekf0/branch/master)](https://ci.appveyor.com/project/MattClarkson/cmakecatch2)
+[![Build Status](https://travis-ci.org/MattClarkson/CMakeCatchMPI.svg?branch=master)](https://travis-ci.org/MattClarkson/CMakeCatchMPI)
+[![Build Status](https://ci.appveyor.com/api/projects/status/5pm89ej732c1ekf0/branch/master)](https://ci.appveyor.com/project/MattClarkson/cmakecatchmpi)
 
 
 Purpose
 -------
 
 This is a demo project to demonstrate a reasonable structure for [CMake](https://cmake.org/) based projects,
-that use [CTest](https://cmake.org/) to run unit tests via [Catch](https://github.com/catchorg/Catch2).
+that use [CTest](https://cmake.org/) to run unit tests via [Catch](https://github.com/catchorg/Catch2),
+specifically demonstrating some uses of MPI.
 
 
 Credits
