@@ -48,6 +48,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMake)
 # Include extra CMake stuff for configuring this project.
 ######################################################################
 include(mitkFunctionCheckCompilerFlags)
+include(mitkFunctionGetGccVersion)
 
 
 ######################################################################
@@ -93,6 +94,12 @@ set(CMAKECATCHMPI_CXX_STANDARD 11)
 set(CMAKE_CXX_EXTENSIONS 0)
 set(CMAKE_CXX_STANDARD ${CMAKECATCHMPI_CXX_STANDARD})
 set(CMAKE_CXX_STANDARD_REQUIRED 1)
+
+if(CMAKE_COMPILER_IS_GNUCXX)
+  mitkFunctionGetGccVersion(${CMAKE_CXX_COMPILER} GCC_VERSION)
+else()
+  set(GCC_VERSION 0)
+endif()
 
 # This is necessary to avoid problems with compile feature checks.
 # CMAKE_CXX_STANDARD seems to only set the -std=c++11 flag for targets.
