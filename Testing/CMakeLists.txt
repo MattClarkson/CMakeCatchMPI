@@ -24,7 +24,7 @@ set(TEST_CASES
 
 foreach(_test_case ${TEST_CASES})
   add_executable(${_test_case} ${_test_case}.cpp ccmpiCatchMain.cpp)
-  target_link_libraries(${_test_case} ${ALL_LIBRARIES})
+  target_link_libraries(${_test_case} ${CMAKECATCHMPI_LIBRARIES} ${ALL_THIRD_PARTY_LIBRARIES})
 endforeach()
 
 # Adding tests is done outside the above loop,
