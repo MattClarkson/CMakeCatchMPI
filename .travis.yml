@@ -64,7 +64,8 @@ before_install:
     sudo apt-get -yqq install mesa-utils-extra 
     sudo apt-get -yqq install libgl1-mesa-dev 
     sudo apt-get -yqq install libglapi-mesa
-    sudo apt-get -yqq install mpi-default-dev 
+    sudo apt-get -yqq install openmpi-bin libopenmpi-dev
+
     wget -q https://cmake.org/files/v3.6/cmake-3.6.3-Linux-x86_64.sh
     sh cmake-3.6.3-Linux-x86_64.sh --skip-license
 
@@ -73,5 +74,4 @@ script:
   - cd build
   - ../bin/cmake -DBUILD_TESTING:BOOL=ON ..
   - make
-  - cat CMakeCache.txt
   - ctest .
