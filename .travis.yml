@@ -73,4 +73,5 @@ script:
   - cd build
   - ../bin/cmake -DBUILD_TESTING:BOOL=ON ..
   - make
+  - cat CMakeCache.txt
   - ctest .
