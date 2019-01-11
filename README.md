@@ -1,7 +1,7 @@
 CMakeCatchMPI
 ------------------
 
-[![Build Status](https://travis-ci.org/MattClarkson/CMakeCatchMPI.svg?branch=master)](https://travis-ci.org/MattClarkson/CMakeCatchMPI)
+[![Build Status](https://travis-ci.com/MattClarkson/CMakeCatchMPI.svg?branch=master)](https://travis-ci.com/MattClarkson/CMakeCatchMPI)
 
 
 Purpose
